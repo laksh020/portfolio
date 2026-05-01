@@ -1,0 +1,446 @@
+:root {
+    --bg-color: #090917;
+    --primary-glow: #854ce6;
+    --text-white: #f2f3f4;
+    --text-gray: #b1b2b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    overflow-x: hidden;
+    /* Grid Background Effect */
+    background-image: 
+        linear-gradient(rgba(133, 76, 230, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(133, 76, 230, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* Header & Nav */
+header {
+    padding: 20px 10%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    color: var(--primary-glow);
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-white);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-glow);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: var(--text-white);
+}
+
+.hero-content h3 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.hero-content p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Button */
+.btn-cv {
+    background: linear-gradient(225deg, #854ce6 0%, #422afb 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(133, 76, 230, 0.3);
+    transition: 0.3s;
+}
+
+.btn-cv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(133, 76, 230, 0.6);
+}
+
+/* Image Circle with Glow */
+.hero-image {
+    position: relative;
+}
+
+.image-circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-glow);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 0 0 50px rgba(133, 76, 230, 0.4);
+}
+
+.image-circle img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Background Glow Spots */
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--primary-glow);
+    filter: blur(150px);
+    opacity: 0.15;
+    z-index: -1;
+    top: 20%;
+    left: 10%;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.socials a {
+    color: var(--text-white); /* White icons as seen in the image */
+    font-size: 1.5rem;        /* Adjust size to match the screenshot */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect to match the purple theme */
+.socials a:hover {
+    color: var(--primary-glow);
+    transform: translateY(-3px);
+}
+
+/* Skills Section Styling */
+.skills {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    color: var(--text-gray);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skills-card {
+    background: rgba(17, 17, 34, 0.8);
+    border: 1px solid rgba(133, 76, 230, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(133, 76, 230, 0.2);
+}
+
+.skills-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-gray);
+    margin-bottom: 25px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Individual Skill Pill */
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 1px solid rgba(177, 178, 179, 0.3);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--text-gray);
+    transition: 0.3s;
+}
+
+.skill-item:hover {
+    border-color: var(--primary-glow);
+    color: var(--text-white);
+}
+
+.skill-item img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #171721;
+    border: 0.1px solid rgba(133, 76, 230, 0.2);
+    width: 330px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(133, 76, 230, 0.3);
+    filter: brightness(1.1);
+}
+
+.project-img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-info h3 {
+    font-size: 1.4rem;
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clam: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Project Tech Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    background: rgba(133, 76, 230, 0.1);
+    color: var(--primary-glow);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Container for the image and buttons */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* The overlay that appears on hover */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darkens the image on hover */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+/* Show the overlay when the card is hovered */
+.project-card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* Individual button styling */
+.overlay-btn {
+    width: 70%;
+    padding: 8px 0;
+    background: var(--primary-glow);
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.overlay-btn.code-btn {
+    background: #222233; /* Darker color for "View Code" */
+    border: 1px solid var(--primary-glow);
+}
+
+.overlay-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section Styling */
+.contact {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact-form {
+    background: rgba(23, 23, 33, 0.8);
+    border: 1px solid rgba(133, 76, 230, 0.3);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-white);
+    text-align: left;
+}
+
+/* Form Inputs */
+.contact-form input, 
+.contact-form textarea {
+    background: transparent;
+    border: 1px solid var(--text-gray);
+    border-radius: 12px;
+    padding: 15px;
+    color: var(--text-white);
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 8px rgba(133, 76, 230, 0.3);
+}
+
+/* Gradient Send Button */
+.btn-send {
+    background: linear-gradient(225deg, #854ce6 0%, #422afb 100%);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-send:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(133, 76, 230, 0.5);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 25px;
+    }
+}
