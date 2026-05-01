@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font for that modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+
+        <!-- Add this inside your <head> tag -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <nav>
+            <div class="logo">&lt;Lakshay/Vashishth&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+           <div class="socials">
+    <a href="https://github.com/laksh020" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/Lakshay Vashishth" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I am <br> <span>Lakshay Vashishth</span></h1>
+            <h3>I am a <span class="typing">Frontend Developer</span></h3>
+            <p>I'm a Frontend Developer passionate about turning creative ideas into functional reality using html, css and Javascript, and I enjoy experimenting with new frameworks to optimize the user journey. Also I am learning C++ to build up my problem solving skills.</p>
+            <button class="btn-cv">DOWNLOAD CV</button>
+        </div>
+        
+        <div class="hero-image">
+            <div class="image-circle">
+                <img src="laksh.jpg" alt="Tarun Kaushik">
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+    <h2 class="section-title">SKILLS</h2>
+    <p class="section-subtitle">A collection of my technical skills and expertise honed through various projects and experiences</p>
+    
+    <div class="skills-container">
+        <!-- Frontend Card -->
+        <div class="skills-card">
+            <h3>Frontend</h3>
+            <div class="skills-list">
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"> HTML</div>
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"> CSS</div>
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS"> JavaScript</div>
+            </div>
+        </div>
+
+        <!-- Languages Card -->
+<div class="skills-card">
+    <h3>Languages</h3>
+    <div class="skills-list">
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"> C</div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"> C++</div>
+    </div>
+</div>
+
+<!-- Tools Card -->
+<div class="skills-card">
+    <h3>Tools</h3>
+    <div class="skills-list">
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"> Git</div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1);"> GitHub</div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"> VS Code</div>
+    </div>
+</div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <h2 class="section-title">PROJECTS</h2>
+    <p class="section-subtitle">A showcase of the projects I have worked on, highlighting my skills and experience in various technologies</p>
+
+    <div class="projects-container">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+            <img src="car.png" alt="CAR RENTAL WEBSITE" class=project-img>
+            <div class="project-info">
+                <h3>FUTURE MOBILITY</h3>
+                <p>I created a modern car rental interface that turns a complex search into a three-click booking experience. Using a html, css and javascript, I engineered a device-agnostic platform that looks just as sleek on a phone as it does on a desktop.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">CONTACT</h2>
+    <p class="section-subtitle">I'd love to hear from you—reach out for any opportunities or questions!</p>
+
+    <div class="contact-container">
+       <form action="https://formspree.io/f/xrejbbwq" method="POST" class="contact-form">
+            <h3>Connect With Me 🚀</h3>
+           <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="tel" name="mobile" placeholder="Mobile" required>
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn-send">Send</button>
+</form>
+    </div>
+</section>
+</body>
+</html>
